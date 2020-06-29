@@ -1,0 +1,45 @@
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    title GroupBoard
+  body
+    div#container
+      div.sidebar
+        div#profile 여기는 프로필
+        div#menu 여기는 메뉴
+          ul
+            li Home
+            li Write
+            li today
+      div.main-content
+        div.header Header
+          button.login-btn Login
+        div.main
+          textarea#tdtext This is Textarea
+          button.submit-btn 확인
+          div.todo 요것저것 
+      div(class="modal-overlay hidden")
+        div.modal 
+          h3 Login
+          div#login
+            label(for="user-id") id
+            input(id="user-id" type="text")
+            label(for="user-password") password
+            input(id="user-password" type="password")
+          div#join
+            h3 Join
+            div.input-row
+            label(for="user-newid") id
+            input(type="text" id="user-newid")
+            div.input-row
+            label(for="user-newpassword") password
+            input(type="password" id="user-newpassword")
+            div.input-row
+            lbael(for="user-newnick") nickname
+            input(type="text" id="user-nick")
+
+          button.login-post-btn Login
+          button#modal-hidden 나가기  
+
+  link(rel="stylesheet",href="main.css")
+  script(src="main.js")
