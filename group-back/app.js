@@ -48,18 +48,7 @@ app.use('/',indexRouter);
 app.use('/post',postRouter);
 app.use('/auth',authRouter);
 
-// 에러 처리
-app.use((req,res,next)=>{
-    const err = new Error('Not Found');
-    console.error("err");
-    console.log("error");
-    // err.status(404);
-    next(err);
-});
 
-app.use((err,req,res,next)=>{ 
-    console.error(err);
-});
 
 // 실행
 app.listen(app.get('port'),()=>{

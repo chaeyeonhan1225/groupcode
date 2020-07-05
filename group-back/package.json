@@ -1,13 +1,13 @@
 {
-  "name": "groupcode",
-  "version": "0.0.1",
-  "description": "group coding board",
+  "name": "group-back",
+  "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "author": "chaeyeon",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -15,10 +15,13 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "mongoose": "^5.9.20",
+    "mongoose": "^5.9.21",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
