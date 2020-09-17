@@ -6,6 +6,8 @@ router.post('/',(req,res,next)=>{
     if(content){
         // db에 저장
         console.log(content);
+    } else {
+        res.status(200);    // post 저장 실패
     }
 });
 

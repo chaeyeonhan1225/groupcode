@@ -14,10 +14,10 @@ const indexRouter = require('./routes');
 const postRouter = require('./routes/post');
 const authRouter = require('./routes/auth');
 // mongoose
-const connect = require('./schemas');
+//const connect = require('./schemas');
 
 const app = express();
-connect();
+// connect();
 
 // set
 app.set('views',path.join(__dirname,'views'));
@@ -28,6 +28,7 @@ app.set('port',8001);
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json());
+app.use(cookieParser("COOKIESECRET"));
 app.use(session({
     resave: false,
     secret: process.env.COOKIE_SECRET,
