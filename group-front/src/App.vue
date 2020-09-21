@@ -1,24 +1,25 @@
 <template>
   <v-app>
-    <v-app-bar app flat>
+    <v-app-bar app flat color="white">
       <v-spacer></v-spacer>
-      <v-toolbar-title>GroupCode</v-toolbar-title>
+      <a href="/"><h1>GroupCode</h1></a>
       <v-spacer></v-spacer>
       <template v-slot:extension>
-        <v-tabs align-with-title grow>
-          <v-tab>Menu1</v-tab>
-          <v-tab>Menu2</v-tab>
-          <v-tab>Menu3</v-tab>
+        <v-tabs centered>
+          <v-tab to="/login">SignIn</v-tab>
+          <v-tab>MyGroup</v-tab>
+          <v-tab>TASK</v-tab>
+          <v-tab>SETTING</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
     <v-main>
       <v-row>
-        <v-col cols="12" md="2"/>
+        <v-col cols="12" md="2" />
         <v-col cols="12" md="8">
-          <LoginForm/>
+          <router-view />
         </v-col>
-        <v-col cols="12" md="2"/>
+        <v-col cols="12" md="2" />
       </v-row>
       <v-footer dark padless>
         <v-row justify="center" no gutters>
@@ -32,17 +33,22 @@
 </template>
 
 <script>
-  import LoginForm from './components/LoginForm';
-
   export default {
     name: 'App',
-
-    components: {
-      LoginForm
-    },
-
     data: () => ({
       //
     }),
   };
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.mark_pen{
+  background: linear-gradient(to top,yellow 50%,transparent 50%);
+}
+
+</style>
