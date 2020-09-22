@@ -7,8 +7,8 @@ import Home from '@/views/Home'
 Vue.use(VueRouter);
 
 // Lazy Load 적용
-const Login = () => import(/* webpackChunkName: "login" */ '../components/LoginForm');
-const SignUp = () => import(/* webpackChunkName: "home" */ '../components/SignUpForm');
+const Login = () => import(/* webpackChunkName: "login" */ '@/views/LoginForm');
+const SignUp = () => import(/* webpackChunkName: "home" */ '@/views/SignUpForm');
 const MakeGroup = () => import(/* webpackChunkName: "home" */ '@/views/MakeGroup');
 
 const router = new VueRouter({
